@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet/less" type="text/css" href="styles.less" />
-    <script src="https://cdn.jsdelivr.net/npm/less@4.1.1" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/less@4.1.1" ></script>    
     <title>tuttor of math</title>
 </head>
 <body>
@@ -52,7 +52,8 @@
                 <span class="spanFour">4</span>
                 </span>                
             </span>
-            <a class="btn home_btn" href="#form">Получить консультацию</a>
+            <a class="btn home_btn_forForm" href="#form">Получить консультацию</a>
+            <a target="_blank" href="./js_simple_quiz/index.html" class="btn home_btn_forQuiz">Проверить знания</a>
             <div class="home_anime">
                 <div class="home_anime_circle"></div>
                 <img class="home_anime_head" src="./img/white_head_png.png" alt="head">
@@ -163,14 +164,17 @@
                 <a href="#eff" class="cont_txt_bold">Эффективность</a>
                 <a href="#priv" class="cont_txt_bold">Преимущества</a>                
             </div>
-            <form action="parukevich@gmail.com" class="contacts_form" title="заказать консультацию">
+            <form action="/" method="post" class="contacts_form" id="contacts_form" title="заказать консультацию">
                 <h3>Заказать консультацию</h3>
-                <input type="text" placeholder="имя" id="form">
+                <input type="text" name="name" placeholder="имя" id="form">
                 <input type="tel" name="telephone" id="tel" placeholder="телефон" pattern="[0-9]+$">
                 <button class="formSubmit" type="submit" title="заказать консультацию">заказать</button>
             </form>
         </footer>
-        <a href="#" class="upScroll">&laquo;</a>       
+        <a href="#" class="upScroll" id="upScroll">&laquo;</a>       
     </main>
+    <!-- <script type="module" src="./js_files/main.js"></script> -->
+    <!-- <script src="./js_files/submitForm.js"></script> -->
+    <script type="module" src="./js_files/main.js"></script>
 </body>
 </html>

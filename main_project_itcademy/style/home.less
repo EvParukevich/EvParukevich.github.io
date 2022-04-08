@@ -1,10 +1,11 @@
 .home {
     display: grid;
-    grid-template: auto auto auto / 1fr 0.9fr;
+    grid-template: auto auto auto auto / 1fr 0.9fr;
     grid-template-areas: 
         "home_h1 home_anime"
         "home_formuls home_anime"
-        "home_btn home_anime"
+        "home_btn_forForm home_anime"
+        "home_btn_forQuiz home_btn_forQuiz"
     ;
     background: linear-gradient(198.25deg, @back_color 68.79%, rgba(93, 95, 255, 0) 99.45%);
     color:@text_color;
@@ -17,10 +18,10 @@
 .home_h1 {
     & span {
         animation-name: h1_anime_o;
-        animation-duration: 3s;
+        animation-duration: 1.5s;
         position: relative;
         animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-        animation-delay: 3s;
+        animation-delay: 0.5s;
         opacity: 0;
         animation-fill-mode: forwards;
     }
@@ -65,9 +66,9 @@
         right: 0;
         opacity: 0;
         animation-name: formuls_anime4;
-        animation-duration: 3s;
+        animation-duration: 1.5s;
         animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-        animation-delay: 3s;
+        animation-delay: 0.5s;
         animation-fill-mode: forwards;
     }
     @keyframes formuls_anime4 {
@@ -82,9 +83,9 @@
     }
     & .spanQuestion {
         animation-name:formuls_animeQuestion;
-        animation-duration: 3s;
+        animation-duration: 1.5s;
         animation-timing-function:cubic-bezier(0.215, 0.610, 0.355, 1);
-        animation-delay: 3s;
+        animation-delay: 0.5s;
         animation-fill-mode: forwards;
     }
     @keyframes formuls_animeQuestion {
@@ -98,11 +99,18 @@
         }
     }
 }
-.home_btn {
-    grid-area: home_btn;
+.home_btn_forForm {
+    grid-area: home_btn_forForm;
     font-size: text_s;
     color: @text_color;    
     background-color: @btn_color;
+}
+.home_btn_forQuiz {
+    grid-area: home_btn_forQuiz;
+    font-size: text_s;
+    color: @text_color;    
+    background-color: @btn_color;
+    margin-top: 20px;
 }
 .home_anime {
     grid-area: home_anime;
@@ -119,8 +127,8 @@
     right: -5%;
     top: -10%;
     animation-name: home_anime_circle;
-    animation-delay: 5s;
-    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-duration: 0.5s;
     animation-fill-mode: forwards;
     z-index: 1;    
 }
